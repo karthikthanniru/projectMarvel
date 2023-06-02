@@ -1,0 +1,88 @@
+body {
+    margin: 0;
+    padding: 0;
+    background-color: black;
+}
+
+.imageRaoate {
+    width: 200px;
+    height: 70%;
+    position: absolute;
+    border-radius: 100px;
+}
+.titleDisplay
+{
+display: flex;
+}
+.titleText{
+    color:white;
+    align-items: center;
+ position: relative;
+ left:25%;
+    letter-spacing: 10px;
+  
+
+}
+.logoFixer
+{
+    width: 50px;
+}
+.block {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: relative;
+    margin: 5% auto 0;
+    width: 90%;
+    height: 80%;
+    background: linear-gradient(0deg, black, rgb(43, 43, 43));
+}
+.firstBlock {
+    background:linear-gradient(0deg,skyblue,white);
+    border-radius: 30px;
+    box-sizing: border-box;
+    box-shadow: 1px 2px 25px orange;
+    width: 45%;
+    height: 80%;
+    margin-left: 30px;
+    
+}
+
+.secondBlock {
+    background:linear-gradient(0deg,orange,white);
+    border-radius: 30px;
+    width: 45%;
+    height: 80%;
+    margin-right: 30px;
+    box-sizing: border-box;
+    box-shadow: 1px 2px 25px skyblue;
+}
+.glow::before,
+.glow::after {
+    content: ' ';
+    position: absolute;
+    left: -2px;
+    top: -2px;
+    background: linear-gradient(45deg, #e6fb04, #ff6600, #00ff66, #00ffff, #ff00ff, #ff0099, #6e0dd0, #ff3300, #099fff);
+    background-size: 400%;
+    width: calc(100% + 5px);
+    height: calc(100% + 5px);
+    z-index: -1;
+    animation: animate 20s linear infinite;
+}
+
+@keyframes animate {
+    0% {
+        background-position: 0 0;
+    }
+    50% {
+        background-position: 400% 0;
+    }
+    100% {
+        background-position: 0 0;
+    }
+}
+
+.glow::after {
+    filter: blur(40px);
+}
